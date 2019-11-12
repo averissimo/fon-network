@@ -1,10 +1,10 @@
 [Unit]
-Description=Fon Netwrok
+Description=Pi Network
 After=multi-user.target
 
 [Service]
 Type=idle
-ExecStart=/home/pi/fon-network /home/pi/fon-network/internet.py
+ExecStart=/home/pi/pi-network /home/pi/pi-network/internet.py
 
 [Install]
 WantedBy=multi-user.target

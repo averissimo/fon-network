@@ -1,0 +1,3 @@
+[general]
+host=1.1.1.1
+cmd="echo 'no network!!'"
