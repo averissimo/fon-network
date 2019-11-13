@@ -1,5 +1,6 @@
 import os
 import os.path
+import subprocess
 import socket
 import time
 import configparser
@@ -40,7 +41,7 @@ def internet(host="8.8.8.8", port=53, timeout=3, cmd=''):
       time.sleep(1)
 
   if error_count >= 10:
-    os.system(cmd)
+    subprocess.call(cmd)
     logger.error('Error: 10 times without access to %s:%d -- executing cmd: \'%d\'', host, port, cmd)
 
 # Setup global variables
