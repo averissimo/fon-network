@@ -11,7 +11,7 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 
 logging.config.fileConfig(os.path.join(dir_path, 'options.log.conf'))
 
-logger = logging.getLogger('file')
+logger = logging.getLogger('root')
 
 logger.info('')
 logger.info('Starting..')
