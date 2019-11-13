@@ -1,10 +1,14 @@
+import os
+import os.path
 import socket
 import time
 import configparser
 import logging
 import logging.config
 
-logging.config.fileConfig('options.log.conf')
+dir_path = os.path.dirname(os.path.realpath(__file__))
+
+logging.config.fileConfig(os.path.join(dir_path, 'options.log.conf'))
 
 logger = logging.getLogger('file')
 
@@ -45,7 +49,7 @@ timeout_sleep = DEFAULT_SLEEP # timeout to check internet -- increases as connec
 # Get ip configuration
 config = configparser.ConfigParser()
 try:
-  config.read('./options.conf')
+  config.read(os.path.join(dir_path, 'options.conf'))
   general = config['general']
 except KeyError as ex:
   config['general'] = {}
