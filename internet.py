@@ -5,6 +5,7 @@ import time
 import configparser
 import logging
 import logging.config
+from systemd.journal import JournalHandler
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 

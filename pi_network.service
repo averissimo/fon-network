@@ -4,7 +4,7 @@ After=multi-user.target
 
 [Service]
 Type=idle
-ExecStart=/home/pi/pi-network /home/pi/pi-network/internet.py
+ExecStart=python3 /home/pi/pi-network/internet.py
 
 [Install]
 WantedBy=multi-user.target
