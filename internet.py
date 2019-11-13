@@ -41,7 +41,8 @@ def internet(host="8.8.8.8", port=53, timeout=3, cmd=''):
       time.sleep(1)
 
   if error_count >= 10:
-    subprocess.call(cmd)
+    for sstr in cmd.split('&&'):
+        subprocess.run(sstr.strip().split(' ', 1))
     logger.error('Error: 10 times without access to %s:%d -- executing cmd: \'%d\'', host, port, cmd)
 
 # Setup global variables
