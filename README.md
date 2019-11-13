@@ -1,6 +1,7 @@
 ## Python check for connectivity
 
 ```
+$ sudo apt install python-systemd python3-systemd
 $ virtualenv -p python3 env
 $ source env/bin/activate
 $ pip install -r requirements.txt
